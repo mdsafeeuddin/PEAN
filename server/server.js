@@ -13,10 +13,7 @@ app.use(cors(corsOptions));
 const db = require("./models");
 const Role = db.role;
 
-db.sequelize.sync({force: true}).then(() => {
-  console.log('Drop and Resync Db');
-  initial();
-});
+db.sequelize.sync();
 
 function initial() {
   Role.create({
