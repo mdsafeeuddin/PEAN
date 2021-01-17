@@ -14,6 +14,7 @@ const db = require("./models");
 const Role = db.role;
 
 db.sequelize.sync();
+// initial();
 
 function initial() {
   Role.create({
